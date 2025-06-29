@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaHarvest - Rain Water Conservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Rain Background Animation -->
+    <div class="rain-background" id="rain"></div>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="logo">AquaHarvest</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#analysis">Technical Analysis</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#rainfall">Rainfall Data</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Register</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Harvest Rain, Sustain Life</h1>
+        <p>Discover efficient rain water harvesting solutions tailored for Telangana's climate. Our systems help you conserve water, reduce dependency on municipal supply, and contribute to a sustainable future.</p>
+        <a href="#analysis" class="cta-button">Calculate Your Savings</a>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>AquaHarvest is a pioneering initiative dedicated to promoting rainwater harvesting across Telangana. Founded in 2020, our mission is to combat water scarcity through innovative and sustainable solutions.</p>
+                <p>With years of expertise in water conservation, our team of engineers and environmentalists have designed customized rainwater harvesting systems that cater to the unique geographical and climatic conditions of Telangana.</p>
+                <p>We believe that every drop counts, and our systems ensure that not a single drop of precious rainwater goes to waste. From residential buildings to large commercial complexes, we provide end-to-end solutions for all your water conservation needs.</p>
+                <p>Our vision is to make Telangana a water-secure state by empowering communities with the knowledge and tools to harness rainwater effectively.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Rainwater Harvesting System">
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Analysis Section -->
+    <section id="analysis" class="tech-analysis">
+        <h2 class="section-title">Technical Analysis</h2>
+        <div class="analysis-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="district">District in Telangana</label>
+                    <select id="district">
+                        <option value="">Select District</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Rangareddy">Rangareddy</option>
+                        <option value="Medchal">Medchal</option>
+                        <option value="Sangareddy">Sangareddy</option>
+                        <option value="Vikarabad">Vikarabad</option>
+                        <option value="Mahabubnagar">Mahabubnagar</option>
+                        <option value="Nagarkurnool">Nagarkurnool</option>
+                        <option value="Wanaparthy">Wanaparthy</option>
+                        <option value="Jogulamba">Jogulamba</option>
+                        <option value="Nalgonda">Nalgonda</option>
+                        <option value="Suryapet">Suryapet</option>
+                        <option value="Yadadri">Yadadri</option>
+                        <option value="Medak">Medak</option>
+                        <option value="Siddipet">Siddipet</option>
+                        <option value="Kamareddy">Kamareddy</option>
+                        <option value="Adilabad">Adilabad</option>
+                        <option value="Nirmal">Nirmal</option>
+                        <option value="Mancherial">Mancherial</option>
+                        <option value="Komaram Bheem">Komaram Bheem</option>
+                        <option value="Karimnagar">Karimnagar</option>
+                        <option value="Peddapalli">Peddapalli</option>
+                        <option value="Jayashankar">Jayashankar</option>
+                        <option value="Bhadradri">Bhadradri</option>
+                        <option value="Khammam">Khammam</option>
+                        <option value="Warangal Urban">Warangal Urban</option>
+                        <option value="Warangal Rural">Warangal Rural</option>
+                        <option value="Jangaon">Jangaon</option>
+                        <option value="Mahbubabad">Mahbubabad</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="roof-type">Roof Type</label>
+                    <select id="roof-type">
+                        <option value="">Select Roof Type</option>
+                        <option value="concrete">Concrete</option>
+                        <option value="tiled">Tiled</option>
+                        <option value="metal">Metal</option>
+                        <option value="asbestos">Asbestos</option>
+                        <option value="thatched">Thatched</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="area">Roof Area (sq ft)</label>
+                    <input type="number" id="area" placeholder="Enter roof area in square feet">
+                </div>
+                <div class="form-group">
+                    <label for="family">Family Size</label>
+                    <input type="number" id="family" placeholder="Number of family members">
+                </div>
+            </div>
+            <button class="calculate-btn" id="calculate-btn">Calculate Potential</button>
+            <div class="results" id="results">
+                <h3>Your Rainwater Harvesting Potential</h3>
+                <p id="rainfall-amount"></p>
+                <p id="harvest-potential"></p>
+                <p id="water-savings"></p>
+                <p id="system-cost"></p>
+                <p id="payback-period"></p>
+                <p id="recommendation"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <h2 class="section-title">Our Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Best Seller</span>
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Basic Rainwater Filter">
+                </div>
+                <div class="product-info">
+                    <h3>Basic Rainwater Filter</h3>
+                    <p>Simple yet effective first-flush filter for residential use with easy maintenance and durable construction.</p>
+                    <div class="product-price">₹2,500</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Advanced Filtration System">
+                </div>
+                <div class="product-info">
+                    <h3>Advanced Filtration System</h3>
+                    <p>Multi-stage filtration for potable water quality with UV sterilization and activated carbon.</p>
+                    <div class="product-price">₹15,000</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">New</span>
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Underground Storage Tank">
+                </div>
+                <div class="product-info">
+                    <h3>Underground Storage Tank</h3>
+                    <p>5000L capacity HDPE tank with UV protection and reinforced structure for long-term use.</p>
+                    <div class="product-price">₹25,000</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Complete Harvesting Kit">
+                </div>
+                <div class="product-info">
+                    <h3>Complete Harvesting Kit</h3>
+                    <p>Everything you need for a full rainwater harvesting system including installation guide.</p>
+                    <div class="product-price">₹45,000</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pump System">
+                </div>
+                <div class="product-info">
+                    <h3>Pump System</h3>
+                    <p>Energy efficient water pump for distribution with automatic pressure control.</p>
+                    <div class="product-price">₹8,500</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Smart Tech</span>
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Water Level Monitor">
+                </div>
+                <div class="product-info">
+                    <h3>Water Level Monitor</h3>
+                    <p>Smart sensor to track your water storage levels with mobile app integration.</p>
+                    <div class="product-price">₹3,200</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rainfall Data Section -->
+    <section id="rainfall" class="rainfall-section">
+        <h2 class="section-title">Rainfall Data & Water Wastage</h2>
+        <div class="rainfall-map">
+            <p>Select a state on the map below to view district-wise rainfall data and estimated water wastage due to lack of harvesting systems.</p>
+            <div class="map-container">
+                <img src="https://media.gettyimages.com/id/2202751476/video/zoom-in-to-chennai-india-from-earth-satellite-view-of-the-asia-cinematic-world-map-animation.jpg?s=640x640&k=20&c=Q_T97AgXjStsyJe4FFEpDGINzXhJfL3q2UwNY39s7EA=" alt="India Map" class="map-image">
+                <svg class="state-selector" viewBox="0 0 1200 1324" preserveAspectRatio="xMidYMid meet">
+                    <!-- Telangana -->
+                    <path class="state-area" data-state="Telangana" d="M650,550 C670,540 690,530 710,540 C730,550 740,570 730,590 C720,610 700,620 680,610 C660,600 650,580 650,550 Z"></path>
+                    <!-- Andhra Pradesh -->
+                    <path class="state-area" data-state="Andhra Pradesh" d="M710,540 C730,530 750,520 770,530 C790,540 800,560 810,580 C820,600 830,620 810,630 C790,640 770,650 750,640 C730,630 720,610 710,590 C700,570 690,550 710,540 Z"></path>
+                    <!-- Karnataka -->
+                    <path class="state-area" data-state="Karnataka" d="M600,600 C620,590 640,580 660,590 C680,600 690,620 680,640 C670,660 650,670 630,660 C610,650 600,630 600,600 Z"></path>
+                    <!-- Maharashtra -->
+                    <path class="state-area" data-state="Maharashtra" d="M550,450 C570,440 590,430 610,440 C630,450 640,470 650,490 C660,510 670,530 650,540 C630,550 610,560 590,550 C570,540 560,520 550,500 C540,480 530,460 550,450 Z"></path>
+                    <!-- Tamil Nadu -->
+                    <path class="state-area" data-state="Tamil Nadu" d="M680,640 C700,630 720,620 740,630 C760,640 770,660 780,680 C790,700 800,720 780,730 C760,740 740,750 720,740 C700,730 690,710 680,690 C670,670 660,650 680,640 Z"></path>
+                </svg>
+            </div>
+            <div class="district-selector" id="district-selector">
+                <label for="district-select">Select District:</label>
+                <select id="district-select">
+                    <option value="">Select a district</option>
+                    <!-- Districts will be populated by JavaScript -->
+                </select>
+            </div>
+            <div class="rainfall-data" id="rainfall-data">
+                <h3>Rainfall and Water Wastage Data</h3>
+                <div class="data-grid">
+                    <div class="data-item">
+                        <h4>Annual Rainfall</h4>
+                        <p id="annual-rainfall">- mm</p>
+                    </div>
+                    <div class="data-item">
+                        <h4>Monsoon Rainfall</h4>
+                        <p id="monsoon-rainfall">- mm</p>
+                    </div>
+                    <div class="data-item">
+                        <h4>Rainy Days</h4>
+                        <p id="rainy-days">- days</p>
+                    </div>
+                    <div class="data-item">
+                        <h4>Estimated Wastage</h4>
+                        <p id="water-wastage">- liters</p>
+                    </div>
+                    <div class="data-item">
+                        <h4>Potential Savings</h4>
+                        <p id="potential-savings">- liters</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#analysis">Analysis</a>
+                <a href="#products">Products</a>
+                <a href="#rainfall">Rainfall Data</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 AquaHarvest. All rights reserved. | Designed with ❤️ for a sustainable future
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Login</h2>
+            <form class="modal-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required placeholder="Enter your password">
+                </div>
+                <div class="error-message" id="login-error">Invalid email or password</div>
+                <button type="submit" class="modal-submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Register</h2>
+            <form class="modal-form" id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required placeholder="Create a password">
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm">Confirm Password</label>
+                    <input type="password" id="register-confirm" required placeholder="Confirm your password">
+                </div>
+                <div class="error-message" id="register-error">Passwords do not match</div>
+                <div class="register-message">Sorry, registration slots are currently full. Please try again later.</div>
+                <button type="submit" class="modal-submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
